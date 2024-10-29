@@ -5,7 +5,7 @@ import styles from './ImageGallery.module.scss'
 const cx = classNames.bind(styles)
 
 function ImageGallery() {
-  return <Section>ImageGallery</Section>
+  return <Section title="사진첩">ImageGallery</Section>
 }
 
 export default ImageGallery
