@@ -1,4 +1,8 @@
 .wrap-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+
   .wrap-image {
     img {
       width: 100%;
