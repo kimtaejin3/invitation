@@ -59,7 +59,7 @@ function App() {
     <div className={cx('container')}>
       <Heading date={date} />
       <Video />
-      <ImageGallery />
+      <ImageGallery images={galleryImages} />
       {JSON.stringify(wedding)}
     </div>
   )
