@@ -14,3 +14,9 @@
 .swiper-slide img {
   width: 100%;
 }
+
+.swiper-pagination {
+  .swiper-pagination-bullet {
+    background-color: #fc9b32;
+  }
+}

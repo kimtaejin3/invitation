@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-
+import { Pagination } from 'swiper'
 import classNames from 'classnames/bind'
 
 import styles from './ImageViewer.module.scss'
@@ -7,6 +7,8 @@ import styles from './ImageViewer.module.scss'
 import 'swiper/css'
 
 import './swiper.css'
+
+import 'swiper/css/pagination'
 
 const cx = classNames.bind(styles)
 
@@ -29,10 +31,12 @@ function ImageViewer({
     <div className={cx('dimmed')}>
       <CloseButton className={cx('icon-close')} onClose={onClose} />
       <Swiper
+        modules={[Pagination]}
         spaceBetween={20}
         slidesPerView={1}
         loop
         initialSlide={selectedIdx}
+        pagination={true}
       >
         {images.map((src, idx) => (
           <SwiperSlide key={idx}>
