@@ -17,7 +17,7 @@ function ImageGallery({ images }: { images: string[] }) {
           ))}
         </ul>
       </Section>
-      <ImageViewer />
+      <ImageViewer images={images} />
     </>
   )
 }
