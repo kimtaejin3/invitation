@@ -10,7 +10,17 @@ import './swiper.css'
 
 const cx = classNames.bind(styles)
 
-function ImageViewer({ images }: { images: string[] }) {
+function ImageViewer({
+  images,
+  open = false,
+}: {
+  images: string[]
+  open: boolean
+}) {
+  if (open === false) {
+    return null
+  }
+
   return (
     <div className={cx('dimmed')}>
       <Swiper spaceBetween={20} slidesPerView={1} loop initialSlide={0}>
