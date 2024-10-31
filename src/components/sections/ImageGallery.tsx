@@ -32,7 +32,7 @@ function ImageGallery({ images }: { images: string[] }) {
           ))}
         </ul>
       </Section>
-      <ImageViewer images={images} open={open} />
+      <ImageViewer images={images} open={open} selectedIdx={selectedIdx} />
     </>
   )
 }

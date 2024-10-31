@@ -13,9 +13,11 @@ const cx = classNames.bind(styles)
 function ImageViewer({
   images,
   open = false,
+  selectedIdx,
 }: {
   images: string[]
   open: boolean
+  selectedIdx: number
 }) {
   if (open === false) {
     return null
@@ -23,7 +25,12 @@ function ImageViewer({
 
   return (
     <div className={cx('dimmed')}>
-      <Swiper spaceBetween={20} slidesPerView={1} loop initialSlide={0}>
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={1}
+        loop
+        initialSlide={selectedIdx}
+      >
         {images.map((src, idx) => (
           <SwiperSlide key={idx}>
             <img className={cx('img')} src={src} alt="이미지 뷰어" />
