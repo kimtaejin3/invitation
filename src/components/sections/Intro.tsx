@@ -1,5 +1,8 @@
 import classNames from 'classnames/bind'
+
 import Section from '../shared/Section'
+import Text from '../shared/Text'
+
 import { format } from 'date-fns'
 import { ko } from 'date-fns/locale'
 
@@ -12,9 +15,16 @@ interface IntroProps {
   brideName: string
   locationName: string
   date: string
+  message: string
 }
 
-function Intro({ groomName, brideName, locationName, date }: IntroProps) {
+function Intro({
+  groomName,
+  brideName,
+  locationName,
+  date,
+  message,
+}: IntroProps) {
   return (
     <Section className={cx('container')}>
       <div className={cx('wrap-persons')}>
@@ -27,6 +37,8 @@ function Intro({ groomName, brideName, locationName, date }: IntroProps) {
         <span>{format(date, 'yyyy년 M월 d일 eeee', { locale: ko })}</span>
         <span>{locationName}</span>
       </div>
+
+      <Text>{message}</Text>
     </Section>
   )
 }

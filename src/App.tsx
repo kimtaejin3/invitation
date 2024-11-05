@@ -54,7 +54,14 @@ function App() {
     return null
   }
 
-  const { galleryImages, groom, bride, location, date } = wedding
+  const {
+    galleryImages,
+    groom,
+    bride,
+    location,
+    date,
+    message: { intro },
+  } = wedding
 
   return (
     <div className={cx('container')}>
@@ -65,6 +72,7 @@ function App() {
         brideName={bride.name}
         locationName={location.name}
         date={date}
+        message={intro}
       />
       <ImageGallery images={galleryImages} />
       {JSON.stringify(wedding)}
