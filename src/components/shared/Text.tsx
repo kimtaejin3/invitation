@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Test({ children }: { children: string }) {
+function Text({ children }: { children: string }) {
   const message = children.split('\n').map((str, idx, array) => {
     return (
       <React.Fragment key={idx}>
@@ -12,4 +12,4 @@ function Test({ children }: { children: string }) {
   return <div>{message}</div>
 }
 
-export default Test
+export default Text
