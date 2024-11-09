@@ -79,7 +79,6 @@ function App() {
       <Invitation message={invitation} />
       <ImageGallery images={galleryImages} />
       <Calendar date={date} />
-      {JSON.stringify(wedding)}
     </div>
   )
 }

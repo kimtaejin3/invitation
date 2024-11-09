@@ -6,6 +6,9 @@ import styles from './Calendar.module.scss'
 import classNames from 'classnames/bind'
 import Section from '../shared/Section'
 
+import 'react-day-picker/style.css'
+import { DayPicker } from 'react-day-picker'
+
 const cx = classNames.bind(styles)
 
 function Calendar({ date }: { date: string }) {
@@ -20,6 +23,15 @@ function Calendar({ date }: { date: string }) {
         <span className={cx('txt-time')}>
           {format(weddingDate, 'aaa h시 eeee', { locale: ko })}
         </span>
+      </div>
+
+      <div>
+        <DayPicker
+          locale={ko}
+          className={cx('calendar')}
+          month={weddingDate}
+          selected={weddingDate}
+        />
       </div>
     </Section>
   )
