@@ -11,6 +11,12 @@ import { DayPicker } from 'react-day-picker'
 
 const cx = classNames.bind(styles)
 
+const css = `
+  .rdp-month_caption, .rdp-nav {
+    display: none;
+  }
+`
+
 function Calendar({ date }: { date: string }) {
   const weddingDate = parseISO(date)
 
@@ -26,11 +32,15 @@ function Calendar({ date }: { date: string }) {
       </div>
 
       <div>
+        <style>{css}</style>
         <DayPicker
           locale={ko}
+          mode="single"
+          // classNames={{ root: cx('my-calendar') }}
           className={cx('calendar')}
           month={weddingDate}
           selected={weddingDate}
+          formatters={{ formatCaption: () => '' }}
         />
       </div>
     </Section>
